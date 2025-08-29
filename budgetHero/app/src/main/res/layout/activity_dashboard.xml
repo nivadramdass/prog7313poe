@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dashboard_peach">
+
+    <!-- Top App Bar with Add Buttons -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dashboard_pink"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:titleTextAppearance="@style/ToolbarTitleText"
+        app:navigationIconTint="@color/dashboard_text"
+        app:titleTextColor="@color/dashboard_text">
+
+        <!-- Profile Button: Top left -->
+        <ImageButton
+            android:id="@+id/buttonProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Profile"
+            android:layout_gravity="start"
+            android:padding="8dp"
+            app:tint="@color/dashboard_text" />
+
+        <!-- Right-side actions -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:gravity="end|center_vertical">
+            <ImageButton
+                android:id="@+id/buttonAddTransaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Add Transaction"
+                android:src="@android:drawable/ic_input_add"
+                app:tint="@color/dashboard_text"/>
+            <ImageButton
+                android:id="@+id/buttonAddCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Add Category"
+                android:src="@android:drawable/ic_menu_add"
+                app:tint="@color/dashboard_text"/>
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="112dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Balance Display -->
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance: R0.00"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/dashboard_text"
+                android:fontFamily="@font/abhayalibrebold"/>
+
+            <!-- Summary Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Summary of all expenses"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"
+                android:textColor="@color/dashboard_text"
+                android:fontFamily="@font/abhayalibrebold"/>
+
+            <Spinner
+                android:id="@+id/spinnerSummaryPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp" />
+
+            <!-- Donut chart + Legend/Key -->
+            <LinearLayout
+                android:id="@+id/summarySection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/dashboard_blue">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChartExpenses"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/legendSection"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTotalExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Expenses: R0.00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/dashboard_text"
+                android:fontFamily="@font/abhayalibrebold"/>
+
+            <!-- Goals Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dashboard_purple">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Goals"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dashboard_text"
+                    android:fontFamily="@font/abhayalibrebold"/>
+                <Button
+                    android:id="@+id/buttonAddGoal"
+                    style="@style/Widget.MyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goalsListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:background="@color/dashboard_blue">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Expenses"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dashboard_text"
+                    android:fontFamily="@font/abhayalibrebold"/>
+
+                <Button
+                    android:id="@+id/buttonViewAllExpenses"
+                    style="@style/Widget.MyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View All Expenses"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTop3ExpensesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top 3 Most Frequent Expenses"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/dashboard_text"
+                android:gravity="center"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/abhayalibrebold"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barChartTopCategories"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/dashboard_yellow"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        app:menu="@menu/bottom_nav_menu"
+        android:background="@color/dashboard_pink"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

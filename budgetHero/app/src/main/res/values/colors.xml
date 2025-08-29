@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dashboard_pink">#ffcbe1</color>
+    <color name="dashboard_yellow">#f9e1a8</color>
+    <color name="dashboard_blue">#6493b8</color>
+    <color name="dashboard_purple">#dcccec</color>
+    <color name="dashboard_peach">#fff2e2</color> <!-- light peach, but see below -->
+    <color name="dashboard_peach_dark">#af8062</color> <!-- richer peach for dark mode -->
+    <color name="dashboard_text">#222222</color>
+    <color name="dashboard_text_night">#faf8f5</color>
+
+
+</resources>

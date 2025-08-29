@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "284415114348",
+    "project_id": "budgethero-ce712",
+    "storage_bucket": "budgethero-ce712.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284415114348:android:b7ce26a2d4f70d80562c49",
+        "android_client_info": {
+          "package_name": "com.example.budgethero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "284415114348-mehcp75oaim16hgep2qlpp18vl4v263s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVputGVGAVszTRfyms1EV1f8IsnI_yd9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "284415114348-mehcp75oaim16hgep2qlpp18vl4v263s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

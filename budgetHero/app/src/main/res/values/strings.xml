@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">budgetHero</string>
+
+    <string name="default_web_client_id">284415114348-mehcp75oaim16hgep2qlpp18vl4v263s.apps.googleusercontent.com</string>
+
+    <string-array name="summary_period_options">
+        <item>1 week</item>
+        <item>1 month</item>
+        <item>3 months</item>
+        <item>6 months</item>
+        <item>1 year</item>
+        <item>2 years</item>
+        <item>5 years</item>
+        <item>All time</item>
+    </string-array>
+
+
+    <string-array name="period_options">
+        <item>All</item>
+        <item>Today</item>
+        <item>This week</item>
+        <item>This month</item>
+        <item>This year</item>
+    </string-array>
+    <string-array name="type_options">
+        <item>All</item>
+        <item>Income</item>
+        <item>Expense</item>
+    </string-array>
+    <string-array name="sort_options">
+        <item>Recent → Oldest</item>
+        <item>Oldest → Recent</item>
+        <item>Amount High → Low</item>
+        <item>Amount Low → High</item>
+    </string-array>
+
+</resources>

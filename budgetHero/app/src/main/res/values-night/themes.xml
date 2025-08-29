@@ -1,0 +1,27 @@
+<resources>
+    <style name="Theme.BudgetHero" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dashboard_blue</item>
+        <item name="colorPrimaryVariant">@color/dashboard_purple</item>
+        <item name="colorOnPrimary">@color/dashboard_text_night</item>
+        <item name="android:windowBackground">@color/dashboard_peach_dark</item>
+        <item name="colorSurface">@color/dashboard_purple</item>
+        <item name="colorOnSurface">@color/dashboard_text_night</item>
+        <item name="colorAccent">@color/dashboard_pink</item>
+        <item name="fontFamily">@font/abhayalibreregular</item>
+    </style>
+
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/dashboard_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/abhayalibrebold</item>
+    </style>
+
+
+    <style name="Widget.MyButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/dashboard_pink</item>
+        <item name="android:textColor">@color/dashboard_text</item>
+        <item name="android:fontFamily">@font/abhayalibrebold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
